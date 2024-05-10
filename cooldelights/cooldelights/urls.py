@@ -25,3 +25,7 @@ urlpatterns = [
      path("contact",include("main.urls"))
     
 ]
+
+admin.site.site_header = 'Cool delights'                    
+admin.site.index_title = 'Admin page cool delights'                 
+admin.site.site_title = 'Admin gurleen' 

@@ -1,7 +1,35 @@
 {% extends "base.html"%}
 {% block title%}Contact{%endblock title%}
 {%block body%}
-THIS IS Contact PAGE
+
+<div class="container my-5 px-4" style="border:2px solid black">
+  <br><br>
+<h3> Contact us for any queries or problems </h3>
+
+
+<form method="POST" action="/contact">
+  {% csrf_token %}
+    <div class="form-group my-3">
+      <label for="InputEmail1">Email address</label>
+      <input type="text" class="form-control" id="InputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div><br>
+    <div class="form-group my-3">
+      <label for="Inputname">Name</label>
+      <input type="text" class="form-control" id="Inputname" name="name" placeholder="Enter your name">
+    </div><br>
+    <div class="form-group my-3">
+        <label for="Inputphone">Contact number</label>
+        <input type="text" class="form-control" id="Inputphone" name="phone" placeholder="Enter your contact number">
+      </div><br>
+      <div class="form-group my-3">
+        <label for="Inputdesc">Why you want to contact us?</label>
+        <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+      </div><br>
+    
+    <button type="submit" class="btn btn-primary">Submit</button><br><br>
+  </form>
+</div>
 
 
 
